@@ -1,0 +1,21 @@
+<!-- For editing a emp -->
+<div *ngIf="selectedEmp" >
+  <h4>{{currentEmp.name}} Details</h4>
+  <label>Edit Employee name:
+    <input [(ngModel)]="currentEmp.name" #empName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="edit(currentEmp); empName.value=''">
+    Save
+  </button>
+</div>
+<!-- for adding a new emp -->
+<div *ngIf="!selectedEmp" >
+  <label>Add Employee name:
+    <input  #empName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(empName.value); empName.value=''">
+    Save
+  </button>
+</div>

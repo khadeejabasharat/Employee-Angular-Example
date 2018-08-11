@@ -1,0 +1,9 @@
+<h2>My Employees</h2>
+<ul class="emp">
+  <li *ngFor="let emp of emps">
+    <span class="badge">{{emp.id}}</span> {{emp.name}}
+   
+    <button (click)="delete(emp)">Delete</button>
+    <button (click)="edit(emp)">Edit</button>
+  </li>
+</ul>
