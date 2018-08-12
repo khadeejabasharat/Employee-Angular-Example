@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  emps: Emp[];
+  emps: Emp[]= [];
   
   constructor(private empService: EmployeeService, private router:Router) { }
 

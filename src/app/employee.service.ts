@@ -44,4 +44,12 @@ updateEmp (tempEmp: Emp ): Observable<Emp> {
   return this.http.put<Emp>(this.empDisplayUrl, tempEmp, httpOptions);
   
 }
+/* GET employee whose name contains search term */
+searchEmployee(term: string): Observable<Emp[]> {
+  if (!term.trim()) {
+    // if not search term, return empty hero array.
+    return of([]);
+  }
+  return this.http.get<Emp[]>(`${this.empDisplayUrl}/?name=${term}`);
+}
 }

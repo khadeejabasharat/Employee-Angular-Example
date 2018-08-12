@@ -10,7 +10,7 @@ import { Emp } from '../emp';
 })
 export class EmployeeComponent implements OnInit {
 
-  emps: Emp[];
+  emps: Emp[]=[];
   selectedEmp: boolean;
   currentEmp: Emp
   previousUrl: string;

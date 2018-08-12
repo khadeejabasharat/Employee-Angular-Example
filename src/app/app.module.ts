@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './local-database';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
-import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { FormsModule } from '@angular/forms';
+import { EmpSearchComponent } from './emp-search/emp-search.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    HomeComponent
+    HomeComponent,
+    EmpSearchComponent
   ],
   imports: [
     BrowserModule,
